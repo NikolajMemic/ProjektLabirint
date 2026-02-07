@@ -1,19 +1,17 @@
-const player = {
-    row: start.row,
-    col: start.col
-};
+let player = { x: 0, y: 0 };
 
 function movePlayer(key) {
-    let r = player.row;
-    let c = player.col;
+    const currentCell = maze[player.y][player.x];
 
-    if (key === "ArrowUp") r--;
-    if (key === "ArrowDown") r++;
-    if (key === "ArrowLeft") c--;
-    if (key === "ArrowRight") c++;
-
-    if (maze[r][c] === 0) {
-        player.row = r;
-        player.col = c;
+    if (key === "ArrowUp" && !currentCell.walls.top) player.y--;
+    else if (key === "ArrowDown" && !currentCell.walls.bottom) player.y++;
+    else if (key === "ArrowLeft" && !currentCell.walls.left) player.x--;
+    else if (key === "ArrowRight" && !currentCell.walls.right) player.x++;
+    else if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(key)) {
+        // Če pritisne tipko v smer, kjer JE stena -> IZGUBIL SI
+        return "DEAD";
     }
+
+    if (player.x === goal.x && player.y === goal.y) return "WIN";
+    return "OK";
 }

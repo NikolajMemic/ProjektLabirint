@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+#matrixBG {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+#app {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column; /* Elementi bodo eden pod drugim */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* LABIRINT ZGORAJ */
+canvas#mazeCanvas {
+    background-color: rgba(0, 0, 0, 0.95); /* Temnejše ozadje za boljši efekt */
+    transition: background-color 1s ease;
+}
+
+/* UI (GUMBI) SPODAJ */
+#ui {
+    order: 2; /* Drugi element (pod labirintom) */
+    margin-top: 30px; /* Razmik med labirintom in gumbi */
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* STIL ZA GUMBE (Ohranjen) */
+button {
+    background: transparent;
+    color: #00ff41;
+    border: 1px solid #00ff41;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background: #00ff41;
+    color: black;
+    box-shadow: 0 0 10px #00ff41;
+}
+
+#autoSolveBtn {
+    color: #00d4ff;
+    border-color: #00d4ff;
+}
+
+#autoSolveBtn:hover {
+    color: black;
+    background: #00d4ff;
+    box-shadow: 0 0 10px #00d4ff;
+}
+
+#resetBtn {
+    color: #ff3333;
+    border-color: #ff3333;
+}
+
+#resetBtn:hover {
+    color: black;
+    background: #ff3333;
+    box-shadow: 0 0 10px #ff3333;
+}
+
+#timer-box {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    color: #00ff41;
+    text-shadow: 0 0 10px #00ff41;
+    margin-right: 10px;
+}
+/* Stil za gumb, ko je v načinu STOP */
+button#autoSolveBtn.stop-mode {
+    color: #ff3333;
+    border-color: #ff3333;
+}
+
+button#autoSolveBtn.stop-mode:hover {
+    background: #ff3333;
+    color: black;
+    box-shadow: 0 0 15px #ff3333;
+}
