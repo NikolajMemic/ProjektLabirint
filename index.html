@@ -2,22 +2,25 @@
 <html lang="sl">
 <head>
     <meta charset="UTF-8">
-    <title>Labirint 30x30</title>
+    <title>Mabirint</title>
     <link rel="stylesheet" href="css/style.css">
+	<link rel="icon" type ="image/png" href="slike/slika.png">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    <h1>Mabirint</h1>
+	
     <canvas id="matrixBG"></canvas>
     
     <div id="app">
+	<canvas id="mazeCanvas"></canvas>
+	<h1>Mabirint</h1>
         <div id="ui">
             <div id="timer-box">120</div>
             <button id="solveBtn">Pokaži rešitev</button>    
-            <button id="autoSolveBtn">Auto Hack</button>
+            <button id="autoSolveBtn">Auto Solve</button>
             <button id="resetBtn">Ponovi</button>
         </div>
-        <canvas id="mazeCanvas"></canvas>
+        
     </div>
 
     <script src="js/labirint.js"></script>
