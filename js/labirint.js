@@ -3,12 +3,12 @@ const ROWS = 30;
 const CELL_SIZE = 20; 
 let maze = [];
 
-// Definiramo vhod in izhod (celice)
+
 const start = { x: 0, y: 0 };
 const goal = { x: COLS - 1, y: ROWS - 1 };
 
 function generateMaze() {
-    // 1. USTVARIMO MREŽO CELIC
+	
     maze = [];
     for (let y = 0; y < ROWS; y++) {
         maze[y] = [];
@@ -74,13 +74,9 @@ function generateMaze() {
         }
     }
 
-    // 3. KLJUČNI DEL: LUKNJE V STENI (Vhod in Izhod)
-    
-    // Vhod: Odstranimo zgornjo steno v prvi celici (0,0)
-    // To naredi luknjo na vrhu labirinta
+    //luknja na starti
     maze[0][0].walls.top = false;
     
-    // Izhod: Odstranimo spodnjo steno v zadnji celici (29,29)
-    // To naredi luknjo na dnu labirinta
+    //luknja na konci
     maze[ROWS - 1][COLS - 1].walls.bottom = false;
 }
