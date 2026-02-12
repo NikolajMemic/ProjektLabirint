@@ -4,15 +4,8 @@ body {
     background-color: black;
 }
 
-#mabirint{
-    color: red;
-    font-size: 24px;
-}
-
 #matrixBG {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100vw;
     height: 100vh;
     z-index: -1;
@@ -22,20 +15,29 @@ body {
     position: relative;
     z-index: 10;
     display: flex;
-    flex-direction: column; /* Elementi bodo eden pod drugim */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
 }
 
+h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    color: #00ff41;
+    z-index: 20;
+}
+
 canvas#mazeCanvas {
-    background-color: rgba(0, 0, 0, 0.95); /* Temnejše ozadje za boljši efekt */
+    background-color: rgba(0, 0, 0, 0.95); 
     transition: background-color 1s ease;
 }
 
 #ui {
-    order: 2; /* Drugi element (pod labirintom) */
-    margin-top: 30px; /* Razmik med labirintom in gumbi */
+    order: 2;
+    margin-top: 30px;
     display: flex;
     gap: 15px;
     align-items: center;
@@ -58,14 +60,14 @@ button:hover {
 }
 
 #autoSolveBtn {
-    color: #00d4ff;
-    border-color: #00d4ff;
+    color: #ff3333;
+    border-color: #ff3333;
 }
 
 #autoSolveBtn:hover {
     color: black;
-    background: #00d4ff;
-    box-shadow: 0 0 10px #00d4ff;
+    background: #ff3333;
+    box-shadow: 0 0 10px #ff3333;
 }
 
 #resetBtn {
