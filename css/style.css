@@ -4,6 +4,11 @@ body {
     background-color: black;
 }
 
+#mabirint{
+    color: red;
+    font-size: 24px;
+}
+
 #matrixBG {
     position: fixed;
     top: 0;
@@ -23,13 +28,11 @@ body {
     height: 100vh;
 }
 
-/* LABIRINT ZGORAJ */
 canvas#mazeCanvas {
     background-color: rgba(0, 0, 0, 0.95); /* Temnejše ozadje za boljši efekt */
     transition: background-color 1s ease;
 }
 
-/* UI (GUMBI) SPODAJ */
 #ui {
     order: 2; /* Drugi element (pod labirintom) */
     margin-top: 30px; /* Razmik med labirintom in gumbi */
@@ -38,7 +41,6 @@ canvas#mazeCanvas {
     align-items: center;
 }
 
-/* STIL ZA GUMBE (Ohranjen) */
 button {
     background: transparent;
     color: #00ff41;
