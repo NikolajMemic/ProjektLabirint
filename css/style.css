@@ -48,7 +48,7 @@ button {
     background: transparent;
     color: #00ff41;
     border: 1px solid #00ff41;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: monospace;
     font-weight: bold;
     cursor: pointer;
     padding: 10px 20px;
@@ -83,7 +83,7 @@ button:hover {
 }
 
 #timer-box {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: monospace;
     font-size: 24px;
     color: #00ff41;
     text-shadow: 0 0 10px #00ff41;
