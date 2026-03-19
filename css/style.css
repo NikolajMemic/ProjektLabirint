@@ -22,13 +22,12 @@ body {
 }
 
 h1 {
-    font-family:futuristic;
+    font-family:monospace;
     position: absolute;
     top: 20px;
     width: 100%;
     text-align: center;
     color: #00ff41;
-    z-index: 20;
 }
 
 canvas#mazeCanvas {
@@ -89,6 +88,28 @@ button:hover {
     text-shadow: 0 0 10px #00ff41;
     margin-right: 10px;
 }
+
+#instructions {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    max-width: 300px;
+    color: #00ff41;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border: 1px solid #00ff41;
+    box-shadow: 0 0 10px #00ff41;
+}
+
+#instructions h2 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    text-shadow: 0 0 10px #00ff41;
+}
+
 /* Stil za gumb, ko je v načinu STOP */
 button#autoSolveBtn.stop-mode {
     color: #ff3333;
